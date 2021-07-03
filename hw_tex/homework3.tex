@@ -1,0 +1,326 @@
+\documentclass[solution,addpoints,12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{animate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newenvironment{Solution}{\begin{EnvFullwidth}\begin{solution}}{\end{solution}\end{EnvFullwidth}}
+
+\printanswers
+%\unframedsolutions
+\pagestyle{headandfoot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% INSTRUCTIONS %%%%%%%%%%%%%%%%%%%%%
+% * Fill in your name and roll number below
+
+% * Answer in place (after each question)
+
+% * Use \begin{solution} and \end{solution} to typeset
+%   your answers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Fill in the details below
+\def\studentName{\textbf{Name: TODO}}
+\def\studentRoll{\textbf{Roll No: TODO}}
+
+\firstpageheader{CS 6015 (LARP) - Homework 3}{}{\studentName,\studentRoll}
+\firstpageheadrule
+
+\newcommand{\brac}[1]{\left[ #1 \right]}
+\newcommand{\curly}[1]{\left\{ #1 \right\}}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\card}[1]{\left\lvert #1 \right\rvert}
+
+\begin{document}
+
+\noindent \textbf{Honor code}: I pledge on my honor that: I have completed all steps in the below homework on my own, I have not used any unauthorized materials while completing this homework, and I have not given anyone else access to my homework.
+\\~\\~\\
+\begin{flushright}
+\textbf{Name and Signature}
+
+\end{flushright}
+
+
+\begin{questions}
+
+\question[1] Have you read and understood the honor code?
+\begin{solution}
+
+\end{solution}
+
+\uplevel{\textbf{Concept}:  System of linear equations}
+
+
+\question[2] This question has two parts as mentioned below:
+
+\begin{parts}
+\part Find a 2 x 3 system Ax = b whose complete solution is
+\[ x =
+\begin{bmatrix}
+1 \\
+2 \\
+0
+\end{bmatrix}
+%\]
++
+w
+\begin{bmatrix}
+1\\
+3\\
+1
+\end{bmatrix}
+\]
+\begin{solution}
+
+\end{solution}
+\part Now find a 3 x 3 system which has these solutions exactly when $b_1 + b_2 = b_3$. (Note: $b=[b_1\ b_2\  b_3]^T$.)
+\begin{solution}
+
+\end{solution}
+\end{parts}
+
+\question[2] Consider the matrices $A$ and $B$ below\\
+\\
+(i) A = $
+\begin{bmatrix}
+1 & 2 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+1 & 2 & 0 & 1 
+\end{bmatrix}
+$
+(ii) B = $
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+$
+\\
+\begin{parts}
+\part Write down the row reduced echelon form of matrices $A$ and $B$ (also mention the steps involved).
+\begin{solution}
+
+\end{solution}
+
+\part Find all solutions to $A\mathbf{x} = 0$ and $B\mathbf{x} = 0$. 
+\begin{solution}
+
+\end{solution}
+
+\part Write down the basis for the four fundamental subspaces of $A$.
+\begin{solution}
+
+\end{solution}
+\part Write down the basis for the four fundamental subspaces of $B$.
+\begin{solution}
+
+\end{solution}
+\end{parts}
+\uplevel{\textbf{Concept}:  Rank}
+\question[1 \half] Consider the matrices $A$ and $B$ as given below:
+
+~\\
+ $A =
+%\[
+\begin{bmatrix}
+6 & 4 & 2  \\
+-3 & -2 & -1 \\
+9 & 6 & x
+\end{bmatrix}
+%\]
+$
+and B =
+$
+\begin{bmatrix}
+3 & 1 & 3 \\
+y & 2 & y
+\end{bmatrix}
+$
+~\\
+
+Give the values for entries $x$ and $y$ such that the ranks of the matrices $A$ and $B$ are 
+\begin{parts}
+\part 1
+\begin{solution}
+
+\end{solution}
+
+\part 2
+\begin{solution}
+
+\end{solution}
+
+\part 3
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+
+
+\uplevel{\textbf{Concept}:  Nullspace and column space}
+\question[\half] State True or False and explain you answer: The nullspace of $R$ is the same as the nullspace of $U$ (where $R$ is the row reduced echelon form of $A$ and $U$ is the matrix in $LU$ decomposition of $A$). 
+\begin{solution}
+True/False because ...
+\end{solution}
+
+\question [1] Suppose column 1 + column 2 + column5 = $\mathbf{0}$ in a 4 $\times$ 5 matrix $A$. 
+\begin{parts}
+\part What is a special solution for $A\mathbf{x} = \mathbf{0}$
+\begin{solution}
+
+\end{solution}
+\part Describe the null space of $A$.
+\begin{solution}
+
+\end{solution}
+\end{parts}
+
+\question[2] Consider the matrix $A=$
+$\begin{bmatrix}
+1&1\\
+1&2\\
+1&3\\
+\end{bmatrix}$. The column space of this matrix is a 2 dimensional plane. What is the equation of this plane? (You need to write down the steps you took to arrive at the equation)
+\begin{solution}
+
+\end{solution}
+\question[1] True or false? (If true give logical, valid reasoning or give a counterexample if false)\\
+a. If the row space equals the column space then $A^T = A$
+\begin{solution}
+\end{solution}
+b. If $A^T$ = $-A$ then the row space of A equals the column space.
+\begin{solution}
+\end{solution}
+
+\question[1] Which of the four fundamental subspaces are the same for the following pairs of matrices of different sizes? (Assume $A$ is a $m \times n$ matrix)\\
+\begin{parts}
+\part $ \begin{bmatrix}
+A
+\end{bmatrix}
+\text{ and }
+\begin{bmatrix}
+A\\A
+\end{bmatrix}$
+\begin{solution}
+
+
+\end{solution}
+\part $ \begin{bmatrix}
+A\\A
+\end{bmatrix}
+\text{ and }
+\begin{bmatrix}
+A & A\\A & A
+\end{bmatrix}$
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+
+\question[2] For each of the questions below, construct a matrix $A$ which satisfies the given condition or argue why the given condition cannot be satisfied? 
+
+\begin{parts}
+\part A matrix whose row space is equal to its column space 
+\begin{solution}
+
+\end{solution}
+
+\part A matrix whose null space is equal to its column space 
+\begin{solution}
+
+\end{solution}
+
+\part A matrix for which all the four fundamental subspaces are equal
+\begin{solution}
+
+\end{solution}
+\end{parts}
+
+\question[1] True or false? If $A$ is a $m\times m$ square matrix then $\mathcal{N}(A) = \mathcal{N}(A^2)$ (If true give logical, valid reasoning or give a counterexample if false)
+\begin{solution}
+
+\end{solution}
+
+\question[2] Consider matrices $A$ and $B$ and their product $AB$. For each of the questions below fill in the blanks with one of the following options: $<,>,=, \leq,\geq,~can't~say$. Explain your answer.
+\begin{parts}
+
+\part $dim(\mathcal{C}(AB)) \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  dim(\mathcal{C}(A))$
+\begin{solution}
+
+\end{solution}
+
+\part $dim(\mathcal{C}(AB)) \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  dim(\mathcal{C}(B))$
+\begin{solution}
+
+\end{solution}
+
+\part $dim(\mathcal{C}((AB)^\top)) \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  dim(\mathcal{C}(A^\top))$
+\begin{solution}
+
+\end{solution}
+
+\part $dim(\mathcal{C}((AB)^\top)) \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  dim(\mathcal{C}(B^\top))$
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+
+\uplevel{\textbf{Concept}:  Free variables}
+\question[2 \half] True or False (with reason if true or example to show it is false).
+\begin{parts}
+\part A square matrix has no free variables
+\begin{solution}
+True/False because ...
+\end{solution}
+\part An invertible matrix has no free variables
+\begin{solution}
+True/False because ...
+\end{solution}
+\part An $m \times n$ matrix has no more than $n$ pivot variables. 
+\begin{solution}
+True/False because ...
+\end{solution}
+\part An $m \times n$ matrix has no more than $m$ pivot variables.
+\begin{solution}
+True/False because ...
+\end{solution}
+\part Matrices $A$ and $A^T$ have the same number of pivots.
+\begin{solution}
+True/False because ...
+\end{solution}
+\end{parts}
+
+\uplevel{\textbf{Concept}:  Reduced Echelon Form}
+
+
+\question[\half] Suppose R is $m \times n$ matrix of rank $r$, with pivot columns first:
+
+\begin{equation*}
+R = 
+\begin{bmatrix}
+I & F\\
+0 & 0
+\end{bmatrix}
+\end{equation*}
+
+\begin{parts}
+
+\part Find a right-inverse $B$ with $RB = I$ if $r = m$. 
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+
+\end{questions}
+\end{document} 
